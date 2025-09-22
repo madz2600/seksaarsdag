@@ -8,11 +8,13 @@ html, body
 }
 html
 {
+    justify-content: center;
+    align-items: center;
     padding: 0 10vw;
+    display: flex;
+    height: 100%;
 }
 body
 {
-    margin-top: 50vh;
     text-align: center;
-    font-size: 2vw;
 }

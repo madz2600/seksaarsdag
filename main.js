@@ -18,7 +18,9 @@ window.onload = function() {
     let diffDays = Math.round(Math.abs((startdate - enddate) / oneDay));
     let progDays = Math.round(Math.abs((startdate - today) / oneDay));
 
-    document.body.innerHTML = letters.slice(0, letters.length * progDays / diffDays + 4).join(" ");
-    //document.body.innerHTML = letters.join(" ");
+    let text = letters.slice(0, letters.length * progDays / diffDays + offset);
+
+    document.body.style = "font-size:" + (text.length > 100 ? 32 : Math.min(3000 / text.length, 80)) + "px";
+    document.body.innerHTML = text.join(" ");
 }
 
